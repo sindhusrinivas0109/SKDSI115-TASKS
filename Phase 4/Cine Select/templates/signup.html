@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Cine Recommender</title>
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Auto Complete -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="stylesheet" href="../static/style.css">
+    <style>
+        /* Additional styles specific to the signup page */
+        .signup-container {
+            background-color: #fff;
+            padding: 10px;
+            padding-left: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: -5px;
+            margin-bottom: 5px;
+        }
+        .signup-container h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .signup-container input {
+            width: 90%;
+            align-items: center;
+            padding: 5px;
+            margin: 5px 0;
+            border: 0.5px solid #ccc;
+            border-radius: 2.5px;
+        }
+        .signup-container button {
+            width: 90%;
+            align-items: center;
+            padding: 10px;
+            background-color: #646464;
+            border: none;
+            color: #fff;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .signup-container button:hover {
+            background-color: #313030;
+        }
+        .signup-container .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .signup-container p {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cine Select</h1>
+        <p>Your Personal Film Concierge</p>
+    </header>
+    <main>
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="text" id="phone" placeholder="Phone" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="file" id="profile-pic" accept="image/*" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="login-link">
+                <p>account exists? <a href="{{ url_for('shift_login') }}">Login</a></p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <br/> 
+        <div class="social" style="margin-bottom: 0px">
+        <a class="social-icons" href="https://github.com/sindhusrinivas0109" target="_blank"><i class="fa fa-github-alt" style="font-size:24px;color: #e4e0e0"></i></a>
+        <a class="social-icons" href="https://www.linkedin.com/in/sindhu-srinivas-a02012273/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px;color: #e4e0e0"></i></a>
+        <a class="social-icons" href="https://www.instagram.com/sindhu_srinivas09/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size:24px;color: #e4e0e0"></i></a>
+        <a class="social-icons" href="https://twitter.con0725" target="_blank"><i class="fa fa-twitter" style="font-size:24px;color: #e4e0e0"></i></a>
+        <p>&copy; Cine-Select. All rights reserved.</p>
+      </div>
+      </footer>
+    <script src="{{ url_for('static', filename='signup.js') }}"></script>
+</body>
+</html>

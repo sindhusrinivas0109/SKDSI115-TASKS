@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+      
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Auto Complete -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cine Recommender!</h1>
+        <p>A place where heavns of movies hold up</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dashboard_page') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('home') }}">Recommender</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="profile">
+              <img src="default-profile-pic.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+              <span class="username" id="username">User</span>
+              <div class="dropdown-menu" id="dropdown-menu">
+                  <a href="{{ url_for('profile') }}">Profile</a>
+                  <a href="{{ url_for('Signout') }}" onclick="signOut()">Sign Out</a>
+              </div>
+          </div>
+      </div>
+    </nav>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="" alt="Profile Picture" class="profile-pic-large" id="profile-pic-large">
+            <h1 class="username-large" id="username-large"></h1>
+        </div>
+        <div class="profile-details">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Email: <span id="email"></span></li>
+                <li>Phone: <span id="phone"></span></li>
+                <li>Address: <span id="address"></span></li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <br/> 
+        <div class="social" style="margin-bottom: 0px">
+        <a class="social-icons" href="https://github.com/sindhusrinivas0109" target="_blank"><i class="fa fa-github-alt" style="font-size:24px;color: #e4e0e0"></i></a>
+        <a class="social-icons" href="https://www.linkedin.com/in/sindhu-srinivas-a02012273/" target="_blank"><i class="fa fa-linkedin-square" style="font-size:24px;color: #e4e0e0"></i></a>
+        <a class="social-icons" href="https://www.instagram.com/sindhu_srinivas09/?hl=en" target="_blank"><i class="fa fa-instagram" style="font-size:24px;color: #e4e0e0"></i></a>
+        <a class="social-icons" href="https://twitter.con0725" target="_blank"><i class="fa fa-twitter" style="font-size:24px;color: #e4e0e0"></i></a>
+        <p>&copy; Cine-Select. All rights reserved.</p>
+      </div>
+      </footer>
+
+    <script src="../static/profile.js"></script>
+</body>
+</html>
